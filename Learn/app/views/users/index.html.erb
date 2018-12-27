@@ -1,0 +1,8 @@
+<%= "Vous n'êtes pas connectés" if session[:pseudo] == nil %>
+<%= "Vous êtes connecté #{session[:pseudo]}" unless session[:pseudo] == nil %>
+<% @users.each do |user| %>
+  <h1>Le pseudo est <%= user.pseudo %></h1>
+  <h2>- L'e-mail est <%= user.email %></h2>
+  <h2>- Le mot de passe est <%= user.mdp %></h2>
+  <h2 style="padding-bottom: 5rem;">- Son ID est <%= user.id %></h2>
+<% end %>

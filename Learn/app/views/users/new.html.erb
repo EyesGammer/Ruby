@@ -1,0 +1,20 @@
+<h1>S'inscrire</h1>
+<br>
+<%= form_for @user do |f| %>
+  <div class="form-group">
+    <label>Pseudo</label>
+    <%= f.text_field :pseudo, class: 'form-control', placeholder: 'Pseudo', maxlength: 100 %>
+  </div>
+  <div class="form-group">
+    <label>E-Mail</label>
+    <%= f.text_field :email, class: 'form-control', placeholder: 'E-Mail', maxlength: 200 %>
+  </div>
+  <div class="form-group">
+    <label>Mot de passe</label>
+    <%= f.text_field :mdp, class: 'form-control', placeholder: 'Mot de passe', maxlength: 200 %>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">S'inscrire</button>
+    <a href="<%= users_path %>" class="btn btn-danger">Annuler</a>
+  </div>
+<% end %>

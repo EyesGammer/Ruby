@@ -17,4 +17,10 @@ ActiveRecord::Schema.define(version: 2018_12_25_204912) do
     t.text "content"
   end
 
+  create_table "users", id: :integer, limit: 3, options: "ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "pseudo", limit: 100, null: false
+    t.string "email", limit: 200, null: false
+    t.string "mdp", limit: 200, null: false
+  end
+
 end
